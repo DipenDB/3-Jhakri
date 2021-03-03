@@ -13,7 +13,7 @@ const ProductDetail=()=>{
     const product =DATA.find(data=>data.id===route.params.productId);
 
     return(
-        <View style={styles.container}>
+        <View key={product.id} style={styles.container}>
             <View style={{alignItems:'center'}}>
                 <Text numberOfLines={1} style={styles.title}>{product.name}</Text>
             </View>
